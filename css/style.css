@@ -4,13 +4,27 @@
   margin: 0;
 }
 
+a {
+  /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
+  color: #000000;
+}
+a:hover {
+  color: rgba(0, 177, 0, 0.47);
+}
+a:active {
+  color: rgba(255, 0, 0, 0.6);
+}
+a:visited {
+  color: #d5d5d5;
+}
+
 .block:not(.first) {
   /* можно передавать заранее неизвестное количество параметров*/
   padding: 20px 140px 50px 25px;
   background: rgba(0, 0, 255, 0.22);
   height: 200px;
   border: 2px solid silver;
-  width: 300px;
+  width: 200px;
   margin-bottom: 20px;
 }
 
@@ -19,8 +33,8 @@
 }
 #central_block ul {
   list-style: none;
-  display: flex;
-  margin-left: 0.5rem;
+  display: inline-block;
+  width: 100%;
 }
 #central_block li {
   font-family: "Bitstream Charter", sans-serif;
@@ -30,7 +44,10 @@
   font-size: 1.5em;
   font-weight: semi-bold;
   font-family: Garuda, sans-serif;
-  color: #4f4f4f;
+  color: #ff0000;
+}
+#central_block li a:hover {
+  color: aquamarine;
 }
 #central_block a {
   font-size: 1.5em;

@@ -1,0 +1,28 @@
+@mixin Font ($color: red, $fontW){
+  font-size: $mainFontSIze;
+  font-weight: $fontW;
+  font-family: Garuda, sans-serif;
+  color: $color;
+}
+
+@mixin padd($padd...) { /* можно передавать заранее неизвестное количество параметров*/
+  padding: $padd;
+}
+
+@mixin link($link, $hover, $active, $visited){
+  a {  /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
+    color: $link;
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &:visited {
+      color: $visited;
+    }
+  }
+}

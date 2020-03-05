@@ -1,24 +1,16 @@
-$color: #ccc;
-$blockWidth: 300px;
-$border: 2px solid silver;
-$bgColor: rgba(0, 0, 255, 0.22);
-$mainFontSIze: 1.5em;
+
+@import "variables";
+@import "mixins";
+
 
 *{
   padding: 0;
   margin: 0;
 }
 
-@mixin Font ($color: red, $fontW){
-  font-size: $mainFontSIze;
-  font-weight: $fontW;
-  font-family: Garuda, sans-serif;
-  color: $color;
-}
 
-@mixin padd($padd...) { /* можно передавать заранее неизвестное количество параметров*/
-  padding: $padd;
-}
+
+  @include link(#000000, rgba(0, 177, 0, 0.47), rgba(255, 0, 0, 0.6), #d5d5d5);
 
 
 
@@ -35,15 +27,20 @@ $mainFontSIze: 1.5em;
   padding: 30px;
   ul{
     list-style: none;
-    display: flex;
-    margin-left: .5rem;
+    display: inline-block;
+    width: 100%;
+
   }
   li{
     font-family: "Bitstream Charter", sans-serif;
     color: brown;
 
     a{
-      @include Font(#4f4f4f, semi-bold);
+      @include Font(#ff0000, semi-bold);
+
+      &:hover{
+        color: aquamarine;
+      }
 
     }
   }
