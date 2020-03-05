@@ -1,0 +1,42 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.block:not(.first) {
+  /* можно передавать заранее неизвестное количество параметров*/
+  padding: 20px 140px 50px 25px;
+  background: rgba(0, 0, 255, 0.22);
+  height: 200px;
+  border: 2px solid silver;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#central_block {
+  padding: 30px;
+}
+#central_block ul {
+  list-style: none;
+  display: flex;
+  margin-left: 0.5rem;
+}
+#central_block li {
+  font-family: "Bitstream Charter", sans-serif;
+  color: brown;
+}
+#central_block li a {
+  font-size: 1.5em;
+  font-weight: semi-bold;
+  font-family: Garuda, sans-serif;
+  color: #4f4f4f;
+}
+#central_block a {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Garuda, sans-serif;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

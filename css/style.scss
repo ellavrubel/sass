@@ -1,0 +1,54 @@
+$color: #ccc;
+$blockWidth: 300px;
+$border: 2px solid silver;
+$bgColor: rgba(0, 0, 255, 0.22);
+$mainFontSIze: 1.5em;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin Font ($color: red, $fontW){
+  font-size: $mainFontSIze;
+  font-weight: $fontW;
+  font-family: Garuda, sans-serif;
+  color: $color;
+}
+
+@mixin padd($padd...) { /* можно передавать заранее неизвестное количество параметров*/
+  padding: $padd;
+}
+
+
+
+.block:not(.first){
+  @include padd(20px 140px 50px 25px);
+  background: $bgColor;
+  height: 200px;
+  border: $border;
+  width: $blockWidth;
+  margin-bottom:  20px;
+}
+
+#central_block{
+  padding: 30px;
+  ul{
+    list-style: none;
+    display: flex;
+    margin-left: .5rem;
+  }
+  li{
+    font-family: "Bitstream Charter", sans-serif;
+    color: brown;
+
+    a{
+      @include Font(#4f4f4f, semi-bold);
+
+    }
+  }
+  a{
+    @include Font($fontW:bold);
+  }
+}
+
