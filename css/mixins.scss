@@ -1,11 +1,17 @@
 @mixin grid($cols, $margin){
   display: flex;
   background: beige;
-  margin-right: $margin;
   margin-bottom: $margin;
   height: 150px;
 
-  width: ((100% - (($cols - 1) * $margin)) / $cols) ;
+  @if($cols >= 5){
+    width: 100%;
+    margin-right: 0;
+  }
+  @else {
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+    margin-right: $margin;
+  }
 
   &:nth-child(#{$cols}n){  /* обращение к последнему элементу*/
     margin-right: 0;
@@ -23,8 +29,8 @@
   padding: $padd;
 }
 
-@mixin link($link, $hover, $active, $visited){
-  a {  /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
+@mixin link($link, $hover, $active, $visited) {
+  a { /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
     color: $link;
 
     &:hover {
@@ -35,8 +41,6 @@
       color: $active;
     }
 
-    &:visited {
-      color: $visited;
-    }
+    @content;
   }
 }

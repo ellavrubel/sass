@@ -12,16 +12,33 @@
 
   @include link(black, red, blue, green);
 
+.header{
+  @include link(black, red, blue, green){
+    background: blueviolet;
+
+    &:visited{
+      color: red;
+    }
+  }
+}
+
+
+
 #grid{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 
   > div {
-    @include grid(7, 5%);
-
+    @include grid(4, 5%);
   }
+}
 
+@for $I from 24 to 29{
+  .#{$someVar}-#{$I}{
+    width: 50px+$I;
+    height: 50px+$I;
+  }
 }
 
 .block:not(.first){
