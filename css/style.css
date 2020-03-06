@@ -6,16 +6,34 @@
 
 a {
   /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
-  color: #000000;
+  color: black;
 }
 a:hover {
-  color: rgba(0, 177, 0, 0.47);
+  color: #cccccc;
 }
 a:active {
-  color: rgba(255, 0, 0, 0.6);
+  color: blue;
 }
 a:visited {
-  color: #d5d5d5;
+  color: green;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#grid > div {
+  display: flex;
+  background: beige;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 150px;
+  width: 10%;
+}
+#grid > div:nth-child(7n) {
+  /* обращение к последнему элементу*/
+  margin-right: 0;
 }
 
 .block:not(.first) {
@@ -34,7 +52,7 @@ a:visited {
 #central_block ul {
   list-style: none;
   display: inline-block;
-  width: 100%;
+  width: 33.3333333333%;
 }
 #central_block li {
   font-family: "Bitstream Charter", sans-serif;

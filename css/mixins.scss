@@ -1,3 +1,17 @@
+@mixin grid($cols, $margin){
+  display: flex;
+  background: beige;
+  margin-right: $margin;
+  margin-bottom: $margin;
+  height: 150px;
+
+  width: ((100% - (($cols - 1) * $margin)) / $cols) ;
+
+  &:nth-child(#{$cols}n){  /* обращение к последнему элементу*/
+    margin-right: 0;
+  }
+}
+
 @mixin Font ($color: red, $fontW){
   font-size: $mainFontSIze;
   font-weight: $fontW;
@@ -14,7 +28,7 @@
     color: $link;
 
     &:hover {
-      color: $hover;
+      color: lighten($link, 80%);
     }
 
     &:active {

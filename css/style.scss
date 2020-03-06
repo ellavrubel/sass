@@ -10,9 +10,19 @@
 
 
 
-  @include link(#000000, rgba(0, 177, 0, 0.47), rgba(255, 0, 0, 0.6), #d5d5d5);
+  @include link(black, red, blue, green);
 
+#grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
+  > div {
+    @include grid(7, 5%);
+
+  }
+
+}
 
 .block:not(.first){
   @include padd(20px 140px 50px 25px);
@@ -28,7 +38,7 @@
   ul{
     list-style: none;
     display: inline-block;
-    width: 100%;
+    width: (100%/3);
 
   }
   li{
