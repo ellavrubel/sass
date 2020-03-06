@@ -8,8 +8,6 @@
   margin: 0;
 }
 
-
-
   @include link(black, red, blue, green);
 
 .header{
@@ -21,8 +19,6 @@
     }
   }
 }
-
-
 
 #grid{
   display: flex;
