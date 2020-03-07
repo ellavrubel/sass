@@ -1,0 +1,152 @@
+//
+////@import "variables";
+////@import "mixins";
+//
+//$color: #ccc;
+//$blockWidth: 200px;
+//$border: 2px solid silver;
+//$bgColor: rgba(0, 0, 255, 0.22);
+//$mainFontSIze: 1.5em;
+//
+//$someVar: some_class;
+//
+//@mixin grid($cols, $margin){
+//  display: flex;
+//  background: beige;
+//  margin-bottom: $margin;
+//  height: 150px;
+//
+//  @if($cols >= 5){
+//    width: 100%;
+//    margin-right: 0;
+//  }
+//  @else {
+//    width: ((100% - (($cols - 1) * $margin)) / $cols);
+//    margin-right: $margin;
+//  }
+//
+//  &:nth-child(#{$cols}n){  /* обращение к последнему элементу*/
+//    margin-right: 0;
+//  }
+//}
+//
+//@mixin Font ($color: red, $fontW){
+//  font-size: $mainFontSIze;
+//  font-weight: $fontW;
+//  font-family: Garuda, sans-serif;
+//  color: $color;
+//}
+//
+//@mixin padd($padd...) { /* можно передавать заранее неизвестное количество параметров*/
+//  padding: $padd;
+//}
+//
+//@mixin link($link, $hover, $active, $visited) {
+//  a { /*при указании тега - вызывать mixin можно просто указав @include(аргументы)*/
+//    color: $link;
+//
+//    &:hover {
+//      color: lighten($link, 80%);
+//    }
+//
+//    &:active {
+//      color: $active;
+//    }
+//
+//    @content;
+//  }
+//}
+//
+//
+//*{
+//  padding: 0;
+//  margin: 0;
+//}
+//
+//
+//
+//  @include link(black, red, blue, green);
+//
+//.header{
+//  @include link(black, red, blue, green){
+//    background: blueviolet;
+//
+//    &:visited{
+//      color: red;
+//    }
+//  }
+//}
+//
+//#grid{
+//  display: flex;
+//  flex-wrap: wrap;
+//  width: 100%;
+//
+//  > div {
+//    @include grid(4, 5%);
+//  }
+//}
+//
+//@for $I from 24 to 29{
+//  .#{$someVar}-#{$I}{
+//    width: 50px+$I;
+//    height: 50px+$I;
+//  }
+//}
+//
+//.block:not(.first){
+//  @include padd(20px 140px 50px 25px);
+//  background: $bgColor;
+//  height: 200px;
+//  border: $border;
+//  width: $blockWidth;
+//  margin-bottom:  20px;
+//}
+//
+//#central_block{
+//  padding: 30px;
+//  ul{
+//    list-style: none;
+//    display: inline-block;
+//    width: (100%/3);
+//
+//  }
+//  li{
+//    font-family: "Bitstream Charter", sans-serif;
+//    color: brown;
+//
+//    a{
+//      @include Font(#ff0000, semi-bold);
+//
+//      &:hover{
+//        color: aquamarine;
+//      }
+//
+//    }
+//  }
+//  a{
+//    @include Font($fontW:bold);
+//  }
+//}
+
+                                                                // GULP //
+
+$color: rgba(0, 0, 255, 0.22);
+
+body{
+  background: $color;
+
+  h1{
+    font-weight: lighter;
+  }
+}
+ a{   // устанавливается доп плагин gulp-autoprefixer
+  transition: all, 0.5s, ease-in-out;
+ }
+
+ ul{
+   li{
+     display: flex;
+
+   }
+ }
