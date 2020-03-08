@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
+const    gulp = require('gulp'),
+         rename = require('gulp-rename'),
+         sass = require('gulp-sass'),
+         autoprefixer = require('gulp-autoprefixer'),
+         sourcemaps = require('gulp-sourcemaps');
 
 function css_style(done) {
 
